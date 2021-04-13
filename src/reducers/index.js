@@ -30,6 +30,7 @@ const reducer = (state = initialState, action = {}) => {
         additionalFeatures: state.additionalFeatures.filter(
           (feat) => feat !== action.payload
         ),
+        additionalPrice: state.additionalPrice + action.payload.price,
       };
 
     case REM_FEATURE:
@@ -42,6 +43,7 @@ const reducer = (state = initialState, action = {}) => {
           ),
         },
         additionalFeatures: [...state.additionalFeatures, action.payload],
+        additionalPrice: state.additionalPrice - action.payload.price,
       };
 
     default:
