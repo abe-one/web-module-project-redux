@@ -42,14 +42,8 @@ const reducer = (state = initialState, action = {}) => {
 const store = createStore(reducer);
 console.log(store.getState());
 
-/*
-imports
-create store
-  create reducer
-  pass reducer to createStore
-wrap App in Provider
-pass store as Provider prop
-*/
+///////////////////// RENDER /////////////////////
+
 const rootElement = document.getElementById("root");
 ReactDOM.render(
   <Provider store={store}>
