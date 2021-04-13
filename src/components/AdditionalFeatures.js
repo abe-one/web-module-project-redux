@@ -1,9 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
-
-import AdditionalFeature from "./AdditionalFeature";
-
 import { addFeature } from "../actions";
+import AdditionalFeature from "./AdditionalFeature";
 
 const AdditionalFeatures = ({ additionalFeatures, addFeature }) => {
   return (
@@ -15,7 +13,7 @@ const AdditionalFeatures = ({ additionalFeatures, addFeature }) => {
             <AdditionalFeature
               key={item.id}
               feature={item}
-              action={addFeature}
+              handleClick={() => addFeature(item)}
             />
           ))}
         </ol>

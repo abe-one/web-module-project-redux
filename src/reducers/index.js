@@ -26,8 +26,10 @@ const reducer = (state = initialState, action = {}) => {
         car: {
           ...state.car,
           features: [...state.car.features, action.payload],
-          tibble: "tabble",
         },
+        additionalFeatures: state.additionalFeatures.filter(
+          (feat) => feat !== action.payload
+        ),
       };
 
     default:
